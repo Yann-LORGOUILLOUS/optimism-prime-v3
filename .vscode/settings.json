@@ -1,0 +1,10 @@
+{
+  "editor.minimap.enabled": false,
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.next/**": true,
+    "**/.git/**": true
+  },
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "eslint.run": "onType"
+}

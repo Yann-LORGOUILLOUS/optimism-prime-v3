@@ -1,0 +1,14 @@
+export const MILLISECONDS_PER_SECOND = 1000;
+export const SECONDS_PER_MINUTE = 60;
+export const SECONDS_PER_HOUR = 3600;
+export const SECONDS_PER_DAY = 86400;
+export const SECONDS_PER_WEEK = 604800;
+export const SECONDS_PER_YEAR = 31536000;
+export const MILLISECONDS_PER_WEEK = MILLISECONDS_PER_SECOND * SECONDS_PER_WEEK;
+
+export const REFRESH_INTERVAL_MS = 30000;
+export const CACHE_TTL_MS = 60000;
+
+export const OPTIMISM_CHAIN_ID = 10;
+export const FANTOM_CHAIN_ID = 250;
+export const POLYGON_CHAIN_ID = 137;
