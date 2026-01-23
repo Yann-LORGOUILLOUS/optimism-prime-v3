@@ -1,0 +1,20 @@
+export const OP_TOKEN_ADDRESS = "0x4200000000000000000000000000000000000042" as const;
+export const WETH_TOKEN_ADDRESS = "0x4200000000000000000000000000000000000006" as const;
+
+export const VELODROME_PAIRS = {
+  OP_USDC: "0x47029bc8f5cbe3b464004e87ef9c9419a48018cd",
+  WETH_USDC_V1: "0x79c912fef520be002c2b6e57ec4324e260f38e50",
+  OPP_ETH_V2: "0x62191c893df8d26ac295ba1274a00975dc07190c",
+} as const;
+
+export const VELODROME_VOTING_ESCROW = {
+  address: "0xFAf8FD17D9840595845582fCB047DF13f006787d" as const,
+  treasuryNftIds: [2647, 2648, 2649] as const,
+} as const;
+
+export const MULTICALL_BATCH_SIZES = {
+  relicIds: 40,
+  relicData: 20,
+} as const;
+
+export const BALANCER_OPP_POOL_WEIGHT = 0.3;

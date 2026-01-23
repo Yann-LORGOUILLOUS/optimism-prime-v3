@@ -1,0 +1,1 @@
+export { ReliquaryBlockchainRepository } from "./ReliquaryBlockchainRepository";
