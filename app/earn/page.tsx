@@ -68,6 +68,7 @@ export default function EarnPage() {
     };
   }, [data]);
 
+<<<<<<< HEAD
   const { visibleUserRelics, hiddenUserRelicsCount } = useMemo(() => {
     if (!data) return { visibleUserRelics: [], hiddenUserRelicsCount: 0 };
 
@@ -81,6 +82,13 @@ export default function EarnPage() {
   }, [data, showAllUserRelics]);
 
 
+=======
+  const visibleUserRelics = useMemo(() => {
+    if (!data) return [];
+    return showAllUserRelics ? data.userRelics : data.userRelics.slice(0, 3);
+  }, [data, showAllUserRelics]);
+
+>>>>>>> 7572b1734c4033190d6221ddb90eccab49b28782
   return (
     <div className="w-full min-h-[80vh] flex flex-col items-center px-4 py-12">
       <PageTitle />
@@ -132,7 +140,10 @@ export default function EarnPage() {
 
             <ShowAllUserRelicsSection
               totalRelics={data.userRelics.length}
+<<<<<<< HEAD
               hiddenRelicsCount={hiddenUserRelicsCount}
+=======
+>>>>>>> 7572b1734c4033190d6221ddb90eccab49b28782
               isShowingAll={showAllUserRelics}
               onToggle={() => setShowAllUserRelics(!showAllUserRelics)}
             />
@@ -699,10 +710,13 @@ function UserRelicsSection({ data, visibleRelics }: {
 
       {!hasRelics ? (
         <p className="text-center text-white/50 py-8">You don&apos;t have any relics yet. Create one below!</p>
+<<<<<<< HEAD
       ) : visibleRelics.length === 0 ? (
         <p className="text-center text-white/50 py-8">
           No relics with TVL or claimable rewards. Use &quot;SHOW ALL YOUR RELICS&quot; to view everything.
         </p>
+=======
+>>>>>>> 7572b1734c4033190d6221ddb90eccab49b28782
       ) : (
         <div className="flex flex-col gap-4">
           {visibleRelics.map(relic => (
@@ -710,11 +724,15 @@ function UserRelicsSection({ data, visibleRelics }: {
           ))}
         </div>
       )}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7572b1734c4033190d6221ddb90eccab49b28782
     </Card>
   );
 }
 
+<<<<<<< HEAD
 function ShowAllUserRelicsSection({ totalRelics, hiddenRelicsCount, isShowingAll, onToggle }: {
   totalRelics: number;
   hiddenRelicsCount: number;
@@ -722,6 +740,14 @@ function ShowAllUserRelicsSection({ totalRelics, hiddenRelicsCount, isShowingAll
   onToggle: () => void;
 }) {
   if (hiddenRelicsCount <= 0) return null;
+=======
+function ShowAllUserRelicsSection({ totalRelics, isShowingAll, onToggle }: {
+  totalRelics: number;
+  isShowingAll: boolean;
+  onToggle: () => void;
+}) {
+  if (totalRelics <= 3) return null;
+>>>>>>> 7572b1734c4033190d6221ddb90eccab49b28782
 
   return (
     <Card>

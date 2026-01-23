@@ -315,7 +315,11 @@ function transformPools(
       return {
         level: idx + 1,
         requiredMaturity: lvl.requiredMaturity,
+<<<<<<< HEAD
         multiplier: multiplier,
+=======
+        multiplier: multiplier / 10,
+>>>>>>> 7572b1734c4033190d6221ddb90eccab49b28782
         tvlUsd,
         apr,
         allocShare: levelAllocShare,
